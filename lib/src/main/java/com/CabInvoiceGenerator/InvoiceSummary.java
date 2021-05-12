@@ -13,12 +13,12 @@ public class InvoiceSummary {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(Object o) {
+		if (this == o)
 			return true;
-		if (obj == null || getClass() != obj.getClass())
+		if (o == null || getClass() != o.getClass())
 			return false;
-		InvoiceSummary that = (InvoiceSummary) obj;
+		InvoiceSummary that = (InvoiceSummary) o;
 		return noOfRides == that.noOfRides && Double.compare(that.totalFare, totalFare) == 0
 				&& Double.compare(that.averageFare, averageFare) == 0;
 	}
